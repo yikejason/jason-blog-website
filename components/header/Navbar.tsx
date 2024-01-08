@@ -4,15 +4,15 @@ import NavLink from './NavLink';
 const NavLinks = [
   {
     title: 'Home',
-    path: '#home',
+    path: '/',
   },
   {
     title: 'Blog',
-    path: '#blog',
+    path: '/blog',
   },
   {
     title: 'Portfolio',
-    path: '#Portfolio',
+    path: '/Portfolio',
   },
 ];
 
