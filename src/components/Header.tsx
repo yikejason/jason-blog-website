@@ -16,9 +16,9 @@ const NavLinks = [
   },
 ];
 
-const NavBar = () => {
+const Header = () => {
   return (
-    <nav className="fixed mx-auto left-0 top-0 right-0 z-10 border-b border-gray-200">
+    <header className="fixed left-0 top-0 right-0 z-50 border-b border-gray-200 bg-white">
       <div className="flex container lg:py-4 px-4 py-2 mx-auto justify-between items-center">
         <Link href="/" className="text-gray-900 font-medium">
           Jason
@@ -33,9 +33,9 @@ const NavBar = () => {
           </ul>
         </div>
       </div>
-    </nav>
+    </header>
   );
 };
 
-export default NavBar;
+export default Header;
 
