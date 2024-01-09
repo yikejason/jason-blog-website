@@ -1,4 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
+import GitHubIcon from '../../public/github-fill.svg';
+import LinkedinIcon from '../../public/linkedin-fill.svg';
 
 const Footer = () => {
   return (
@@ -10,7 +13,7 @@ const Footer = () => {
           target="_blank"
           href="https://github.com/yikejason"
         >
-          GitHub
+          <Image src={GitHubIcon} alt="GitHub" />
         </a>
         <a
           className="opacity-50 hover:opacity-80 font-normal"
@@ -18,7 +21,20 @@ const Footer = () => {
           target="_blank"
           href="https://github.com/yikejason"
         >
-          Linkedin
+          <Image src={LinkedinIcon} alt="Linkedin" />
+        </a>
+      </div>
+      <div className="mt-4">
+        <a
+          href="mailto:18215513386@163.com"
+          className="opacity-50 hover:opacity-80 font-normal"
+        >
+          18215513386@163.com
+        </a>
+      </div>
+      <div className="mt-4">
+        <a className="opacity-50 hover:opacity-80 font-normal">
+          ©2023-2024 Jason. All Rights Reserved.
         </a>
       </div>
     </div>
