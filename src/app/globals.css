@@ -19,3 +19,9 @@
 body {
   color: rgb(var(--foreground-rgb));
 }
+
+@layer components {
+  .navigation-underline {
+      @apply w-full border border-yellow-300;
+  }
+}
