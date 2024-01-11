@@ -1,7 +1,7 @@
 'use client';
+import { useState } from 'react';
 import Link from 'next/link';
 import NavLink from './NavLink';
-import { useState } from 'react';
 
 const NavLinks = [
   {
@@ -17,7 +17,7 @@ const NavLinks = [
   {
     id: 'portfolio',
     title: 'Portfolio',
-    path: '/Portfolio',
+    path: '/portfolio',
   },
 ];
 

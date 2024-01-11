@@ -1,12 +1,13 @@
 import React from 'react';
+import Layout from '@/src/components/Layout';
 
-const page = () => {
+const Blog = () => {
   return (
-    <main className="flex  flex-col">
-      <div className="container mx-auto px-12 py-4 mt-24">111</div>
-    </main>
+    <Layout>
+      <div>3</div>
+    </Layout>
   );
 };
 
-export default page;
+export default Blog;
 
