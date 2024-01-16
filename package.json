@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "framer-motion": "^10.17.4",
+    "gray-matter": "^4.0.3",
     "next": "14.0.4",
+    "next-mdx-remote": "^4.4.1",
     "react": "^18",
     "react-dom": "^18"
   },
