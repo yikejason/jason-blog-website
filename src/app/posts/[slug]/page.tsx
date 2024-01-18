@@ -2,6 +2,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import { getPostBySlug, getAllPosts } from '@/lib/post';
 import Layout from '@/src/components/Layout';
 import Button from '@/src/components/mdx/Button';
+import CodeHighLighter from '@/src/components/mdx/CodeHighLighter';
 
 type Props = {
   params: { slug: string };
@@ -22,12 +23,17 @@ export async function generateStaticParams() {
 
 export default async function Post({ params }: Props) {
   const { post } = await getPost(params);
+  console.log(post.content);
 
   return (
     <Layout>
       <h1 className="text-2xl">{post.meta.title}</h1>
       <time className="text-gray-600">{post.meta?.date.toString()}</time>
-      <MDXRemote source={post.content} components={{ Button }} options={{}} />
+      <MDXRemote
+        source={post.content}
+        components={{ Button, CodeHighLighter }}
+        options={{}}
+      />
     </Layout>
   );
 }
