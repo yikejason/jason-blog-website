@@ -1,26 +1,26 @@
 import Link from 'next/link';
-
 import { getAllPosts } from '@/lib/post';
+import Layout from '@/src/components/Layout';
 
 export default async function Posts() {
   const posts = await getAllPosts();
   return (
-    <div className="prose grid gap-9 m-auto">
+    <Layout>
       {posts?.map((post: any) => (
-        <Link
-          href={`/posts/${post.slug}`}
-          className="group font-normal overflow-hidden cursor-pointer no-underline transition fade-in-up "
-          key={post.slug}
-        >
-          <div className="text-xl text-gray-600 group-hover:text-brand truncate ease-in duration-300">
-            {post.meta?.title}
-          </div>
-          <time className="text-gray-400 text-sm leading-none flex items-center">
-            {post.meta?.date?.toString()}
-          </time>
-        </Link>
+        <div key={post.slug} className="mb-12">
+          <h1 className="text-3xl mb-6">{post.meta?.title}</h1>
+          <li className="flex items-center justify-between prose prose-custom dark:prose-invert max-w-none mb-3">
+            <Link
+              href={`/posts/${post.slug}`}
+              className="hover:text-sky-500 hover:underline dark:text-slate-300 dark:hover:text-sky-500"
+            >
+              {post.meta?.description}
+            </Link>
+            <span className="text-sm text-neutral-300">{post.meta?.date}</span>
+          </li>
+        </div>
       ))}
-    </div>
+    </Layout>
   );
 }
 

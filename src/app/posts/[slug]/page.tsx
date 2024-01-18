@@ -1,7 +1,7 @@
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { getPostBySlug, getAllPosts } from '@/lib/post';
 import Layout from '@/src/components/Layout';
-import Button from '../mdx/Button';
+import Button from '@/src/components/mdx/Button';
 
 type Props = {
   params: { slug: string };

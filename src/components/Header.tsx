@@ -12,7 +12,7 @@ const NavLinks = [
   {
     id: 'blog',
     title: 'Blog',
-    path: '/blog',
+    path: '/posts',
   },
   {
     id: 'portfolio',
