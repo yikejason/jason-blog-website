@@ -15,8 +15,8 @@ type MetaData = {
 
 // 根据文件名读取markdown内容
 export function getPostBySlug(slug: string) {
-  const realSlug = slug.replace(/\.mdx$/, '');
-  const fullPath = join(postDir, `${realSlug}.mdx`);
+  const realSlug = slug.replace(/\.md$/, '');
+  const fullPath = join(postDir, `${realSlug}.md`);
 
   const fileContents = fs.readFileSync(fullPath, 'utf-8');
 

@@ -23,7 +23,6 @@ export async function generateStaticParams() {
 
 export default async function Post({ params }: Props) {
   const { post } = await getPost(params);
-  console.log(post.content);
 
   return (
     <Layout>
