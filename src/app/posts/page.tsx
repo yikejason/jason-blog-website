@@ -7,7 +7,7 @@ export default async function Posts() {
   return (
     <Layout>
       {posts?.map((post: any) => (
-        <div key={post.slug} className="mb-12">
+        <div key={post.slug} className="mb-6">
           <h1 className="text-3xl mb-6">{post.meta?.title}</h1>
           <li className="flex items-center justify-between prose prose-custom dark:prose-invert max-w-none mb-3">
             <Link
